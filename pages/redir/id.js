@@ -26,10 +26,3 @@ export async function getStaticProps({ params }){
         props: {params}
     }
 }
-
-export async function getServerSideProps(context){
-    console.log(context)
-    return {
-        props: {},
-    }
-}
