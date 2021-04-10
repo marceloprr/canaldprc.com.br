@@ -12,17 +12,17 @@ const Redir = () => (
 
 export default Redir;
 
-export async function getStaticPaths() {
-    return { paths: [ {
-            params: {
-            id: "mainchannel"
-            }}],
-        fallback: true}
+// export async function getStaticPaths() {
+//     return { paths: [ {
+//             params: {
+//             id: "mainchannel"
+//             }}],
+//         fallback: true}
 
-}
+// }
 
-export async function getStaticProps({ params }){
-    return {
-        props: {params}
-    }
-}
+// export async function getStaticProps({ params }){
+//     return {
+//         props: {params}
+//     }
+// }
