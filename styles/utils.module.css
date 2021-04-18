@@ -34,6 +34,12 @@
   .borderCircle {
     border-radius: 9999px;
   }
+
+  .logoBorderCircle {
+    border-radius: 9999px;
+    max-height: 144px;
+    max-width: 144px;
+  }
   
   .colorInherit {
     color: inherit;

@@ -23,9 +23,11 @@ export default async (_, res) => {
     });
 
     const channel = response.data.items[0];
+    const id = channel.id
     const {subscriberCount, viewCount} = channel.statistics;
 
     return res.status(200).json({
+        id,
         subscriberCount,
         viewCount
     });

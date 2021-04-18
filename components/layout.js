@@ -17,31 +17,46 @@ export default function Layout({children, home}){
                     content="Página sobre o Canal DPRC no Youtube!"
                 />
                 <meta name="og:title" content={siteTitle}/>
+                <meta name="og:description" content="Conheça nosso site sobre o canal DPRC no Youtube e veja nossos últimos vídeos!"/>
                 <meta name="twitter:card" content="summary_large_image"/>
             </Head>
             <header className={styles.header}>
                 {home ? (
                     <>
                     <div style={{
-                        width: `100%`,
-                        height: `100%`,
+                        width: '100%',
+                        height: '144px',
                         backgroundImage: `url("https://yt3.ggpht.com/QYQgAP0x1i0VeNyHmxRjkuOdXy0nhiPmiIWvd71nhZcAaLc6dbr2rp1Nn4OPd7ZAQRPSkMi40A=w2120-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj")`,
-                        backgroundSize: `100% auto`,
-                        backgroundPositionY: '-10px'
+                        backgroundSize: 'auto 250px',
+                        backgroundRepeat: 'no-repeat',
+                        // backgroundPositionY: 'calc(100% + 55px)',
+
+                        backgroundPositionY: '-20px',
+                        backgroundPositionX: 'calc(100% + 640px)',
+                        backgroundPosition: 'center'
                         }}>
-                        <Image
+                        <div style={{
+                            width:'144px',
+                            height: '144px',
+                            backgroundImage: 'url("/images/profile.jpg")',
+                            backgroundSize: 'cover',
+                            position: 'left',
+                            padding: '0px',
+                            margin: '0px'
+                        }} className={utilStyles.logoBorderCircle}>
+                        {/* <Image
                             position = "left"
                             padding = "0px"
-                            priority
                             src="/images/profile.jpg"
-                            className={utilStyles.borderCircle}
-                            height={144}
-                            width={144}
+                            className={utilStyles.logoBorderCircle}
+                            height='144px'
+                            width='144px'
                             alt={name}
-                        />
+                        /> */}
+                        </div>
                     </div>
                     <h1 className={utilStyles.heading2X1}>{name}</h1>
-                    
+
                     </>
                 ) : (
                     <>

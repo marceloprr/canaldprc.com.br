@@ -13,7 +13,8 @@ export async function getStaticProps(){
     props : {
       channelStatistics,
       lastestVideos
-    }
+    },
+    revalidate : 10
   }
 }
 
@@ -39,20 +40,22 @@ export default function Home({ channelStatistics, lastestVideos }) {
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Veja nossas últimas publicações:</h2>
         {lastestVideos.titles.map(({id, title, description, pubDate, thumbnail}) => (
-          <div id="boxes">
-            <div style={{float: 'left', width: '120px'}}>
-              <Image src={thumbnail} width='120px' height="90px"/>
-            </div>
-            <div style={{float: 'right', width: '100%'}}>
-              <p className={utilStyles.listItem} key={id}>
-                <a href={`redir/${id}`} target="_blank">{title}</a>
-                <br />
-                <strong>Descrição:</strong> {description}
-                <br />
-                <Date dateString={pubDate}/>
-              </p>
+          <>
+            <div id="boxes">
+              <div style={{float: 'left', width: '120px'}}>
+                <Image src={thumbnail} width='120px' height="90px"/>
               </div>
-            </div>
+              <div style={{float: 'right', width: '100%'}}>
+                <p className={utilStyles.listItem} key={id}>
+                  <a href={`redir/${id}`} target="_blank">{title}</a>
+                  <br />
+                  <strong>Descrição:</strong> {description}
+                  <br />
+                  <Date dateString={pubDate}/>
+                </p>
+                </div>
+              </div>
+            </>
           ))}
       </section>
         
