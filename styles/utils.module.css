@@ -4,6 +4,8 @@
     font-weight: 800;
     letter-spacing: -0.05rem;
     margin: 1rem 0;
+    font-family: "Brush Script MT", cursive;
+    font-style: italic;
   }
   
   .headingXl {
@@ -12,8 +14,26 @@
     font-weight: 800;
     letter-spacing: -0.05rem;
     margin: 1rem 0;
+    font-family: "Brush Script MT", cursive;
+    font-style: italic;
   }
   
+  .boxes{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    gap: 5px;
+    border-top: 3px double gray;
+    border-bottom: 1px solid gray;
+    align-items: center;
+    justify-content: start;
+  }
+
+  .thumb{
+    grid-row-start: 1;
+    grid-row-end: 4;
+  }
+
   .headingLg {
     font-size: 1.5rem;
     line-height: 1.4;
@@ -33,12 +53,6 @@
 
   .borderCircle {
     border-radius: 9999px;
-  }
-
-  .logoBorderCircle {
-    border-radius: 9999px;
-    max-height: 144px;
-    max-width: 144px;
   }
   
   .colorInherit {

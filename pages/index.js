@@ -24,37 +24,37 @@ export default function Home({ channelStatistics, lastestVideos }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className={utilStyles.headingMdCenter}>
-        <p>Esse é o site sobre o Christian e o MarceloP, protagonistas do Canal DPRC no{' '}
-        <a href="/redir/mainchannel" target="_blank">Youtube{' '}
+      <section className={utilStyles.headingMdCenter}><br/>
+        <h1 className={utilStyles.heading2Xl}>E aí Galerinha, tudo beleza?!?!<br/>Sejam todos bem vindos ao Canal DPRC!</h1><br/>
+        <p>Esse é o site sobre nosso canal no{' '}<a href="/redir/mainchannel" target="_blank">Youtube{' '} 
         <Image
           src="/images/yt_icon_rgb.png"
           height={20}
           width={26}/>
-        </a>
+        </a> protagonizado por MarceloP e Christian!!
         </p>
         <p>
-        Atualmente nosso canal está com {channelStatistics.subscriberCount} inscritos, se você não é inscrito ainda, clique aqui e se inscreva agora!!!
+        Atualmente nosso canal está com {channelStatistics.subscriberCount} inscritos. E se você não é inscrito ainda, clique <a href="/redir/mainchannel?subscribe" target="_blank">aqui</a> e inscreva-se agora!!!
         </p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Veja nossas últimas publicações:</h2>
+        <h2 className={utilStyles.headingXl}>Veja nossas últimas publicações:</h2>
         {lastestVideos.titles.map(({id, title, description, pubDate, thumbnail}) => (
           <>
-            <div id="boxes">
-              <div style={{float: 'left', width: '120px'}}>
+            <div className={utilStyles.boxes}>
+              <div className={utilStyles.thumb}>
                 <Image src={thumbnail} width='120px' height="90px"/>
               </div>
-              <div style={{float: 'right', width: '100%'}}>
-                <p className={utilStyles.listItem} key={id}>
-                  <a href={`redir/${id}`} target="_blank">{title}</a>
-                  <br />
-                  <strong>Descrição:</strong> {description}
-                  <br />
-                  <Date dateString={pubDate}/>
-                </p>
-                </div>
+              <div className={utilStyles.link}>
+                <a href={`redir/${id}`} target="_blank">{title}</a>
               </div>
+              <div className={utilStyles.desc}>
+                {description}
+              </div>
+              <div className={utilStyles.videoDate}>
+                  <Date dateString={pubDate}/>
+              </div>
+            </div>
             </>
           ))}
       </section>

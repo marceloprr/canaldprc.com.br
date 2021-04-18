@@ -25,25 +25,26 @@ export default function Layout({children, home}){
                     <>
                     <div style={{
                         width: '100%',
-                        height: '144px',
+                        height: '160px',
                         backgroundImage: `url("https://yt3.ggpht.com/QYQgAP0x1i0VeNyHmxRjkuOdXy0nhiPmiIWvd71nhZcAaLc6dbr2rp1Nn4OPd7ZAQRPSkMi40A=w2120-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj")`,
-                        backgroundSize: 'auto 250px',
+                        backgroundSize: 'auto 200px',
                         backgroundRepeat: 'no-repeat',
                         // backgroundPositionY: 'calc(100% + 55px)',
 
-                        backgroundPositionY: '-20px',
+                        backgroundPositionY: '100px',
                         backgroundPositionX: 'calc(100% + 640px)',
                         backgroundPosition: 'center'
                         }}>
                         <div style={{
-                            width:'144px',
-                            height: '144px',
+                            width:'160px',
+                            height: '160px',
                             backgroundImage: 'url("/images/profile.jpg")',
                             backgroundSize: 'cover',
-                            position: 'left',
-                            padding: '0px',
-                            margin: '0px'
-                        }} className={utilStyles.logoBorderCircle}>
+                            //backgroundPositionX: 'calc(100% - 3px)',
+                            position: 'relative',
+                            left: '-25px',
+                            borderRadius: '100px'
+                        }}>
                         {/* <Image
                             position = "left"
                             padding = "0px"
@@ -55,7 +56,7 @@ export default function Layout({children, home}){
                         /> */}
                         </div>
                     </div>
-                    <h1 className={utilStyles.heading2X1}>{name}</h1>
+                    {/* <h1 className={utilStyles.heading2X1}>{name}</h1> */}
 
                     </>
                 ) : (
@@ -66,8 +67,8 @@ export default function Layout({children, home}){
                                     priority
                                     src="/images/profile.jpg"
                                     className={utilStyles.borderCircle}
-                                    height={108}
-                                    width={108}
+                                    height={144}
+                                    width={144}
                                     alt={name}
                                 />
                             </a>
