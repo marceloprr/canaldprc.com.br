@@ -1,15 +1,45 @@
 .container {
-    max-width: 75rem;
-    padding: 0 1rem;
-    margin: 3rem auto 6rem;
+  max-width: 75rem;
+  padding: 0 1rem;
+  margin: 1rem auto 6rem;
+}
+
+.dprc_bg{
+    width: 100%;
+    height: 160px;
+    background-image: url("https://yt3.ggpht.com/QYQgAP0x1i0VeNyHmxRjkuOdXy0nhiPmiIWvd71nhZcAaLc6dbr2rp1Nn4OPd7ZAQRPSkMi40A=w2120-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj");
+    background-size: auto 200px;
+    background-repeat: no-repeat;
+    background-position-y: 100px;
+    background-position-x: calc(100% + 640px);
+    background-position: center;
+}
+
+.dprc_avatar{
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  background-repeat: no-repeat;
+  background-image: url("/images/profile.jpg");
+  background-size: 160px 160px;
+  border-radius: 100px;
+  left: calc(21% - 160px)
+}
+
+@media only screen and (max-width: 768px) {
+  .dprc_avatar{
+    position: relative;
+    left: auto;
   }
-  
-  .header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .backToHome {
-    margin: 3rem 0 0;
-  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  vertical-align: top;
+}
+
+.backToHome {
+  margin: 3rem 0 0;
+}
