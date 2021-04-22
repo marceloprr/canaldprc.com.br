@@ -25,3 +25,13 @@ img {
   max-width: 100%;
   display: block;
 }
+
+footer {
+  border-top: 5px double #5a708a;
+  background-color: #252546;
+  color: #0179FE;
+  padding: 30px;
+  text-align: center;
+  font-size: 0.6rem;
+  line-height: 2;
+}
