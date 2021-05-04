@@ -25,15 +25,15 @@ export default function Home({ channelStatistics, lastestVideos }) {
       </Head>
       <section className={utilStyles.headingMdCenter}><br />
         <h1 className={utilStyles.heading2Xl}>E aí Galerinha, tudo beleza?!?!<br />Sejam todos bem vindos ao Canal DPRC!</h1><br />
-        <p>Esse é o site sobre nosso canal no{' '}<a href="/redir/mainchannel" target="_blank">Youtube{' '}
+        <p>Esse é o site sobre canal DPRC no{' '}<a href="/redir/mainchannel" target="_blank">Youtube{' '}
           <Image
             src="/images/yt_icon_rgb.png"
             height={20}
             width={26} />
-        </a> protagonizado por MarceloP e Christian!!
+        </a> protagonizado por Christian e MarceloP!!
         </p>
         <p>
-          Atualmente nosso canal está com {channelStatistics.subscriberCount} inscritos. E se você não é inscrito ainda, clique <a href="/redir/mainchannel?subscribe" target="_blank">aqui</a> e inscreva-se agora!!!
+          Atualmente nosso canal está com {channelStatistics.subscriberCount} inscritos, e se você não é inscrito ainda, clique <a href="/redir/mainchannel?subscribe" target="_blank">aqui</a> e inscreva-se agora!!!
         </p>
         <br/>
       </section>

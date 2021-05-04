@@ -125,3 +125,7 @@
     margin: 5px;
     width: 60px;
   }
+
+  .link {
+    font-weight: bold;
+  }
