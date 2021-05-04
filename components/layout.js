@@ -12,6 +12,8 @@ export default function Layout({children, home}){
         <div className={styles.container}>
             <Head>
                 <link rel="icon" href="/favicon.ico"/>
+                <link rel="preconnect" href="https://fonts.gstatic.com"/>
+                <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Montserrat&display=swap" rel="stylesheet"/>
                 <meta
                     name="description"
                     content="Página sobre o Canal DPRC no Youtube!"

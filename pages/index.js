@@ -3,7 +3,6 @@ import Layout, { siteTitle } from '../components/layout'
 import utilStyles from '../styles/utils.module.css'
 import Image from 'next/image'
 import { getChannelStatistics, getLastestVideos } from '../lib/youtubeChannel'
-import Link from 'next/link'
 import Date from '../components/date'
 
 export async function getStaticProps() {
@@ -36,23 +35,29 @@ export default function Home({ channelStatistics, lastestVideos }) {
         <p>
           Atualmente nosso canal está com {channelStatistics.subscriberCount} inscritos. E se você não é inscrito ainda, clique <a href="/redir/mainchannel?subscribe" target="_blank">aqui</a> e inscreva-se agora!!!
         </p>
+        <br/>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingXl}>Veja nossas últimas publicações:</h2>
+        <div className={utilStyles.headingBlackBg}>
+          <br/>
+          <h2 className={utilStyles.headingX2Center}>Vejam nossas últimas publicações</h2>
+          <br/>
+        </div>
+        <br/>
         {lastestVideos.titles.map(({ id, title, description, pubDate, thumbnail }) => (
           <>
             <div className={utilStyles.boxes}>
               <div className={utilStyles.thumb}>
-                <Image src={thumbnail} width='120px' height="90px" />
+              <a href={`redir/${id}`} target="_blank"><Image src={thumbnail} width='120px' height="90px" /></a>
               </div>
               <div className={utilStyles.link}>
                 <a href={`redir/${id}`} target="_blank">{title}</a>
               </div>
-              <div className={utilStyles.desc}>
-                {description}
-              </div>
               <div className={utilStyles.videoDate}>
                 <Date dateString={pubDate} />
+              </div>
+              <div className={utilStyles.desc}>
+                {description}
               </div>
             </div>
           </>
