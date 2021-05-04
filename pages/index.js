@@ -44,24 +44,26 @@ export default function Home({ channelStatistics, lastestVideos }) {
           <br/>
         </div>
         <br/>
-        {lastestVideos.titles.map(({ id, title, description, pubDate, thumbnail }) => (
-          <>
-            <div className={utilStyles.boxes}>
-              <div className={utilStyles.thumb}>
-              <a href={`redir/${id}`} target="_blank"><Image src={thumbnail} width='120px' height="90px" /></a>
+        <div className={utilStyles.videoList}>
+          {lastestVideos.titles.map(({ id, title, description, pubDate, thumbnail }) => (
+            <>
+              <div className={utilStyles.boxes}>
+                <div className={utilStyles.thumb}>
+                <a href={`redir/${id}`} target="_blank"><Image src={thumbnail} width='120px' height="90px" /></a>
+                </div>
+                <div className={utilStyles.link}>
+                  <a href={`redir/${id}`} target="_blank">{title}</a>
+                </div>
+                <div className={utilStyles.videoDate}>
+                  <Date dateString={pubDate} />
+                </div>
+                <div className={utilStyles.desc}>
+                  {description}
+                </div>
               </div>
-              <div className={utilStyles.link}>
-                <a href={`redir/${id}`} target="_blank">{title}</a>
-              </div>
-              <div className={utilStyles.videoDate}>
-                <Date dateString={pubDate} />
-              </div>
-              <div className={utilStyles.desc}>
-                {description}
-              </div>
-            </div>
-          </>
-        ))}
+            </>
+          ))}
+        </div>
       </section>
       <br />
       <footer>
