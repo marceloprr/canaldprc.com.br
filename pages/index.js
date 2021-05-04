@@ -38,7 +38,7 @@ export default function Home({ channelStatistics, lastestVideos }) {
         <br/>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <div className={utilStyles.headingBlackBg}>
+        <div className={utilStyles.headingLastPublish}>
           <br/>
           <h2 className={utilStyles.headingX2Center}>Vejam nossas últimas publicações</h2>
           <br/>

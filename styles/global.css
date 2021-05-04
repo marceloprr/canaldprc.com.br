@@ -16,7 +16,7 @@ html {
 }
 
 a {
-  color: #0070f3;
+  color: #2438e6;
   text-decoration: none;
 }
 
@@ -31,7 +31,8 @@ img {
 
 footer {
   border-top: 5px double #5a708a;
-  background-color: #252546;
+  /* background-color: #252546; */
+  background-image: linear-gradient(#252546, #06022c);
   color: #0179FE;
   padding: 30px;
   text-align: center;

@@ -32,6 +32,12 @@
     color: #FFFFFF;
   }
 
+  .headingLastPublish {
+    background-color: #06022c;
+    background-image: linear-gradient(#06022c, #252546, #06022c);
+    color: #007AFF;
+  }
+
   .boxes{
     display: grid;
     grid-template-columns: auto auto;
