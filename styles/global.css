@@ -4,19 +4,21 @@ body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
   line-height: 1.6;
-  font-size: 20px;
+  font-size: 21px;
 }
 
 html {
-  background-image: linear-gradient(rgba(52,37,68,.25), white);
+  /* background-image: linear-gradient(rgba(247, 248, 255,.25), #E6F4F1); */
+  background-image: linear-gradient(to bottom, #f7f8ff, #daddee, #bec2dc, #a2a8cb, #878eba);
 }
 
 * {
   box-sizing: border-box;
+  --base-color: #007AFF;
 }
 
 a {
-  color: #2438e6;
+  color:#007AFF;
   text-decoration: none;
 }
 
