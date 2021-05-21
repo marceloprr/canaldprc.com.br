@@ -63,18 +63,20 @@ export default function Home({ channelStatistics, lastestVideos }) {
                 <div className={utilStyles.boxes}>
                   <div className={utilStyles.thumb}>
                     <a href={`redir/${id}`} target="_blank">
-                      <Image src={thumbnail} width="120px" height="90px" />
+                      <Image src={thumbnail} width="200px" height="112px" />
                     </a>
                   </div>
-                  <div className={utilStyles.link}>
-                    <a href={`redir/${id}`} target="_blank">
-                      {title}
-                    </a>
+                  <div>
+                    <div className={utilStyles.link}>
+                      <a href={`redir/${id}`} target="_blank">
+                        {title}
+                      </a>
+                    </div>
+                    <div className={utilStyles.videoDate}>
+                      <Date dateString={pubDate} />
+                    </div>
+                    <div className={utilStyles.desc}>{description}</div>
                   </div>
-                  <div className={utilStyles.videoDate}>
-                    <Date dateString={pubDate} />
-                  </div>
-                  <div className={utilStyles.desc}>{description}</div>
                 </div>
               </>
             )

@@ -40,14 +40,15 @@
 }
 
 .boxes {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto auto auto;
+  display: flex;
+  flex-direction: row;
+  /* grid-template-columns: auto auto; */
+  /* grid-template-rows: auto auto auto; */
   gap: 0.5rem;
   /* border-top: 3px double gray;
     border-bottom: 1px solid gray; */
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
   padding: 0.8rem;
   border-radius: 0.75rem;
   border: 2px solid #252546;
@@ -58,6 +59,12 @@
   );
 }
 
+@media only screen and (max-width: 768px) {
+  .boxes {
+    flex-direction: column;
+  }
+}
+
 .videoList {
   display: flex;
   flex-direction: column;
@@ -65,8 +72,9 @@
 }
 
 .thumb {
-  grid-row-start: 1;
-  grid-row-end: 4;
+  /* grid-row-start: 1;
+  grid-row-end: 4; */
+  min-width: 200px;
 }
 
 .headingLg {
